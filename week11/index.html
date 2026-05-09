@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week11 作業</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>這是一個第11週的CSS作業</h1>
+    </header>
+
+    <main class="main-container">
+        <section class="logo">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="GK Logo">
+            </div>
+            <div class="logo-text">
+                <h2>個人GK雕像 收藏分享</h2>
+                <p>這是一個作業</p>
+                <p class="annotation">手動寫框架內容加上Gemini修改美化以及新增一些沒學過的語法，
+                    加上JavaScript可以讓圖片放大以及關閉</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="box">
+                <img src="img/content (1).jpg" alt="GK 照片 1">
+                <p class="box-title">TOP工作室 宇智波斑</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (2).jpg" alt="GK 照片 2">
+                <p class="box-title">授權 TSUME 鳴佐</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (3).jpg" alt="GK 照片 3">
+                <p class="box-title">YoYo 佩恩</p>
+                <p class="box-subtitle">流風 自來也</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (4).jpg" alt="GK 照片 4">
+                <p class="box-title">YY工作室 明日香&綾波零</p>
+                <a href="#" class="box-link">&lt;新世紀福音戰士&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (5).jpg" alt="GK 照片 5">
+                <p class="box-title">十年百忍 九尾鳴人</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (6).jpg" alt="GK 照片 6">
+                <p class="box-title"> 授權 雲頂摘星 六道佩恩</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (7).jpg" alt="GK 照片 7">
+                <p class="box-title"> 授權 雲頂摘星 宇智波佐助</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (8).jpg" alt="GK 照片 8">
+                <p class="box-title">逆刃 五條悟 vs 伏黑甚爾</p>
+                <p class="box-subtitle">逆刃 夏油傑</p>
+                <a href="#" class="box-link">&lt;咒術迴戰&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (9).jpg" alt="GK 照片 9">
+                <p class="box-title">YoYo 佩恩</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (10).jpg" alt="GK 照片 10">
+                <p class="box-title">授權 TSUME 自來也之死</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (11).jpg" alt="GK 照片 11">
+                <p class="box-title">授權 集美 佩恩</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (12).jpg" alt="GK 照片 12">
+                <p class="box-title">授權 HEX 九尾 VS 波風水門</p>
+                <a href="#" class="box-link">&lt;火影忍者&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (13).jpg" alt="GK 照片 13">
+                <p class="box-title">Figurama 進擊巨人 VS 鎧巨人</p>
+                <a href="#" class="box-link">&lt;進擊的巨人&gt;</a>
+            </div>
+            <div class="box">
+                <img src="img/content (14).jpg" alt="GK 照片 14">
+                <p class="box-title">HF 庫洛洛 vs 西索</p>
+                <a href="#" class="box-link">&lt;HunterXHunter&gt;</a>
+            </div>
+            <div class="box">
+                <div class="placeholder-img">Coming Soon</div>
+                <p class="box-title">待新增</p>
+                <span class="box-link disabled-link">敬請期待</span>
+            </div>
+
+            <div class="box">
+                <div class="placeholder-img">Coming Soon</div>
+                <p class="box-title">待新增</p>
+                <span class="box-link disabled-link">敬請期待</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>收藏分享者：陳崧豪</p>
+        <p>聯絡資訊：<a href="mailto:2411432026@ntut.edu.tw" class="footer-link">2411432026@ntut.edu.tw</a></p>
+        <p>[學校：國立臺中科技大學] [班級：資訊工程系1-1班] [學號：2411432026]</p>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="expandedImg" alt="放大的GK照片">
+    </div>
+
+ <script>
+        const modal = document.getElementById("imageModal");
+        const expandedImg = document.getElementById("expandedImg");
+        const closeBtn = document.querySelector(".close-btn");
+        const images = document.querySelectorAll(".box img");
+
+        // 開啟燈箱的動作 (維持原本的)
+        images.forEach(img => {
+            img.addEventListener("click", function() {
+                modal.style.display = "flex"; 
+                expandedImg.src = this.src;   
+            });
+        });
+
+        // ★ 新增：專門處理「縮小關閉」的魔法功能 ★
+        function closeModal() {
+            // 1. 先幫燈箱加上 'closing' 這個 class，讓 CSS 開始播放縮小動畫
+            modal.classList.add("closing");
+            
+            // 2. 設定計時器 (setTimeout)，等動畫播完 (400毫秒) 後，再真正把它隱藏
+            setTimeout(function() {
+                modal.style.display = "none";
+                modal.classList.remove("closing"); // 隱藏後要把 'closing' 拔掉，以免下次打不開
+            }, 400); // 這裡的 400 要跟 CSS 設定的 0.4s 對應
+        }
+
+        // 點擊右上角的 X 觸發縮小關閉
+        closeBtn.addEventListener("click", closeModal);
+
+        // 點擊黑底的任何地方觸發縮小關閉
+        modal.addEventListener("click", function(e) {
+            if(e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // 按下 ESC 鍵觸發縮小關閉
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && modal.style.display === "flex" && !modal.classList.contains("closing")) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

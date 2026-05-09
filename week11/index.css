@@ -1,0 +1,336 @@
+/* 
+html基礎包含div、header、main、section、footer自己打的，
+CSS對應上述以及搭配期中考應用比較簡單自己寫的，
+然後用Gemini幫我修改美化的，並註解這語法是幹嘛的，
+還有新增一些沒學過的語法跟JavaScript，像是燈箱放大效果、關閉時的縮小淡出動畫、
+還有「待新增」專屬空位樣式等等，讓整個作品看起來更專業、更有質感。
+很多進階應用沒學過，例如字體宣告、使用等等，還有一些CSS動畫、過渡效果等等，
+每個都新增上去玩玩看，讓作業不是單純基礎應用，有想法搭配AI並學習。 
+*/
+
+/* ==========基礎設定========== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "MyCoolFont", sans-serif;
+    font-weight: 400;
+    background-color: #0d0f12; /* 深邃的展示背景色 */
+    color: #ffffff; 
+    padding: 20px;
+}
+
+/* 宣告你的字體 */
+@font-face {
+    font-family: "MyCoolFont";
+    src: url("fonts/my-special-font.ttf"); 
+}
+
+/* ==========頁首與頁尾========== */
+
+header, footer {
+    background-color: #1a1d24; /* 深灰藍色 */
+    color: #d4af37; /* 香檳金字體 */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px; /* 圓角化 */
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    color: #379dd4;        /* 字體顏色：目前是香檳金，你可以換成任何色碼 */
+    font-size: 30px;       /* 字體大小：覺得太大可以改小，例如 20px */
+    font-weight: 700;      /* 字體粗細：700 是粗體，你可以隨意調整 */
+    letter-spacing: 2px;   /* 文字間距：讓字跟字之間稍微拉開，看起來更有質感 */
+    margin: 0;             /* 清除瀏覽器預設的 h1 邊距，確保它完美置中 */
+}
+
+footer {
+    margin-top: 20px;
+    margin-bottom: 0;
+    line-height: 1.8;
+    color: #aaaaaa;
+}
+
+/* 頁尾聯絡資訊超連結 */
+.footer-link {
+    color: #d4af37;
+    text-decoration: none; /* 移除底線 */
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffdf73;
+}
+
+/* ==========logo========== */
+
+.main-container {
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background: linear-gradient(145deg, #1a1d24, #121418); /* 質感漸層背景 */
+    border-radius: 15px; 
+    border: 1px solid #2a2e38;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden; 
+}
+
+.logo-container {
+    padding: 30px;
+    flex-basis: 30%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-right: 1px solid #2a2e38; /* 細緻的分割線 */
+}
+
+.logo-container img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-text {
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-text h2 {
+    color: #d4af37;
+    font-size: 60px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.logo-text p {
+    color: #39b545;
+    font-size: 40px;
+}
+
+.logo-text .annotation {
+    color: #b55ab0;
+    font-size: 20px;
+    margin-top: 5px;
+
+}
+
+/* ==========內容區塊 (GK 展示格)========== */
+
+.content {
+    display: grid;
+    /* 改成 4 格一排，寬度稍微加大到 280px 讓畫面更飽滿 */
+    grid-template-columns: repeat(4, 280px); 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+/* --- BOX --- */
+.box {
+    background: linear-gradient(145deg, #1e222a, #16181d);
+    border: 1px solid #2a2e38; 
+    border-radius: 12px; 
+    padding: 10px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* 滑鼠移過去的特效 (往上浮 + 邊框變金發光) */
+.box:hover {
+    transform: translateY(-5px); 
+    border-color: #d4af37; 
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2); 
+}
+
+/* 照片設定 */
+.box img {
+    width: 100%;
+    height: 180px; 
+    object-fit: contain; /* 確保 GK 特效或武器不會被裁切 */
+    background-color: #000; /* 兩側補純黑底 */
+    border-radius: 8px; 
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.box-title {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 15px; 
+}
+
+/* 副標題樣式 (第二個作品) */
+.box-subtitle {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 8px; /* 跟下面的標籤保持一點距離 */
+    font-size: 15px;
+}
+
+/* 標籤設計 (移除超連結底線，改為膠囊狀) */
+.box-link {
+    color: #8FD1B5; 
+    text-decoration: none; /* 移除底線 */
+    font-size: 12px;
+    background-color: rgba(143, 209, 181, 0.1); 
+    padding: 4px 10px;
+    border-radius: 20px; 
+    transition: all 0.3s ease;
+}
+
+.box-link:hover {
+    background-color: #8FD1B5;
+    color: #121212;
+}
+
+/* ==========響應式設計 (確保螢幕縮小不會破版)========== */
+
+@media (max-width: 1000px) {
+    .content {
+        grid-template-columns: repeat(2, 200px); /* 平板尺寸縮成 2 格一排 */
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        grid-template-columns: repeat(2, 160px); /* 手機版再稍微縮小 */
+    }
+    .logo {
+        flex-direction: column;
+    }
+    .logo-container {
+        border-right: none;
+        border-bottom: 1px solid #2a2e38;
+    }
+}
+
+/* ==========燈箱 (Lightbox) 放大效果樣式========== */
+
+/* 燈箱背景 (預設隱藏) */
+.modal {
+    display: none; /* 預設先藏起來 */
+    position: fixed; /* 固定在螢幕上 */
+    z-index: 999; /* 確保它蓋在所有東西最上層 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 15, 18, 0.95); /* 深邃的半透明黑底 */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* 讓背景稍微模糊，增加高級感 */
+}
+
+/* 放大後的照片 */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3); /* 香檳金的光暈 */
+    object-fit: contain; /* 確保不管直的橫的都能完整顯示 */
+    animation: zoomIn 0.3s ease; /* 增加一點彈出的動畫 */
+}
+
+/* 關閉按鈕 (X) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #8892b0;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #d4af37; /* 滑鼠移過去變金色 */
+}
+
+/* 讓原本格子裡的照片游標變成可點擊的手指 */
+.box img {
+    cursor: pointer; 
+}
+
+/* 彈出動畫 */
+
+/* ==========新增：關閉時的縮小淡出動畫========== */
+
+/* 黑底背景慢慢變透明的動畫 */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* 圖片慢慢縮小並消失的動畫 */
+@keyframes shrinkOut {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.5); opacity: 0; }
+}
+
+/* 當我們用 JavaScript 加上 'closing' 這個標籤時，觸發上面的動畫 */
+.modal.closing {
+    animation: fadeOut 0.4s ease forwards; /* 0.4秒，慢慢變透明 */
+}
+
+.modal.closing .modal-content {
+    animation: shrinkOut 0.4s ease forwards; /* 0.4秒，慢慢縮小 */
+}
+
+/* =========================================
+   「待新增」專屬空位樣式
+
+========================================= */
+/* 整體變半透明，呈現尚未解鎖的感覺 */
+.empty-box {
+    opacity: 0.4; 
+}
+
+/* 移除懸浮放大的特效，讓空位保持靜止不會亮金光 */
+.empty-box:hover {
+    transform: none; 
+    border-color: #2a2e38; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4); 
+}
+
+/* 替代照片的虛線空框 */
+.placeholder-img {
+    width: 100%;
+    height: 180px; /* 必須跟原本照片的高度一致 */
+    background-color: #121418; 
+    border: 2px dashed #444; /* 虛線邊框增加「空位」感 */
+    border-radius: 8px; 
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* 灰色的敬請期待標籤 (不可點擊狀態) */
+.disabled-link {
+    color: #555; 
+    background-color: transparent; 
+    border: 1px solid #333;
+    pointer-events: none; /* 滑鼠無法互動 */
+}
